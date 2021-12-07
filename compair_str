@@ -1,0 +1,16 @@
+#!/bin/bash
+VAR1=`./t | wc -m`
+VAR2=`./v | wc -m`
+txt_t='The program "t" have the next output:'
+txt_v='The program "v" have the next output:'
+echo -e "\033[31m$txt_t\033[37m"
+./t
+echo -e "\033[32m$txt_v\033[37m"
+./v
+echo ""
+echo "---------------------------------------"
+if [ "$VAR1" = "$VAR2" ]; then
+    echo "La salida de ambos programas son iguales."
+else
+    echo "Las salida de ambos programas NO son iguales."
+fi

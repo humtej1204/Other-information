@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "The program \"t\" have the next output:"
+./t
+echo ""
+num=`./t | wc -m`
+echo "And the output have $num characters"

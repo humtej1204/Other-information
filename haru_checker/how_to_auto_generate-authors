@@ -1,0 +1,4 @@
+To generate the AUTHORS file automatically, you need to copy the executable file "generate-authors" in the ".git" directory of the repository which you want to get the AUTHORS
+	cp generate-authors ./.git
+
+Now, you only need to enter in the directory ".git" and execute the file "generate-authors". Then the "AUTHORS" file will be created automatically in the folder that containing the "./git" in which you have the "generate-authors" file.

@@ -1,0 +1,11 @@
+To can read your Own Man Page, you need to fellow the next steps:
+***You need to compress you file with Gzip:
+	gzip -q man_1_simple_shell.1
+
+***You need to move your gzip file to "/usr/share/man/man1/"; remember that depend of your program you need to move in some of the special directories, in my case, my program is a shell emulator so i need to put the file in the dierctory ".../man1" that is for Executable programs or shell commands:
+	sudo cp man_1_simple_shell.1.gz /usr/share/man/man1/
+
+***For read you manual you need to write in your terminal the command man follow by the name of your file which have your own man, in our case "man_1_simple_shell" and finally put the number of the man directory in which our file is, in our case is "man1" so our command will be:
+	man man_1_simple_shell 1
+
+That's ALL!!

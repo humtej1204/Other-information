@@ -1,0 +1,110 @@
+#!/bin/bash
+
+# 1. Variables
+SHELL="./hsh"
+OSHELL="/bin/sh"
+
+OUTFILE1="output_1"
+OUTFILE2="output_2"
+ERROR_OUT1="err_out_1"
+ERROR_OUT2="err_out_2"
+
+command="/bin/ls"
+
+# 2. Funciones
+# run command
+echo "$command" | $SHELL > $OUTFILE1 2> $ERROR_OUT1
+echo "$command" | $OSHELL > $OUTFILE2 2> $ERROR_OUT2
+
+
+# Showing the results of the Outputs and the Errors
+# ***TEXT VARIABLES***
+txt1="This is the STDOUT of OWN SHELL:"
+txt2="This is the STDERR of OWN SHELL:"
+txt3="This is the STDOUT of LINUX SHELL:"
+txt4="This is the STDERR of LINUX SHELL:"
+
+txt_OK="OK"
+txt_KO="KO"
+txt_1="The result it's the same"
+txt_2="Something is fault"
+
+# Comparing Files
+# Deleting the created files with this script in the files
+# OUTFILE1
+sed 's/output_1//' $OUTFILE1 > temp
+sed 's/output_2//' temp > $OUTFILE1
+sed 's/err_out_1//' $OUTFILE1 > temp
+sed 's/err_out_2//' temp > $OUTFILE1
+cat $OUTFILE1 | sed '/^ *$/d' > temp
+cat temp > $OUTFILE1
+rm -f temp
+# OUTFILE2
+sed 's/output_1//' $OUTFILE2 > temp
+sed 's/output_2//' temp > $OUTFILE2
+sed 's/err_out_1//' $OUTFILE2 > temp
+sed 's/err_out_2//' temp > $OUTFILE2
+cat $OUTFILE2 | sed '/^ *$/d' > temp
+cat temp > $OUTFILE2
+rm -f temp
+
+
+# Output Files
+if cmp -s "$OUTFILE1" "$OUTFILE2";
+then
+	echo -e "[\033[32m\033[1m\033[5m$txt_OK\033[0m] $txt_1"
+else
+	echo -e "[\033[31m\033[1m\033[5m$txt_KO\033[0m] $txt_2"
+fi
+# ERROR_OUTput files
+if cmp -s "$ERROR_OUT1" "$ERROR_OUT2";
+then
+	echo -e "[\033[32m\033[1m\033[5m$txt_OK\033[0m] $txt_1"
+else
+	echo -e "[\033[31m\033[1m\033[5m$txt_KO\033[0m] $txt_2"
+fi
+
+# Check if the OUTFILE1 is empty
+if [ -s $OUTFILE1 ]
+then
+	echo -e "\033[33m$txt1\033[0m"
+	cat $OUTFILE1
+	num1=`cat $OUTFILE1 | wc -m`
+	t1="And the output have $num1 characters"
+	echo -e "\033[0m\033[5m\033[44m$t1\033[0m"
+fi
+# Check if the ERROR_OUT1 is empty
+if [ -s $ERROR_OUT1 ]
+then
+	echo -e "\033[31m$txt2\033[0m"
+	cat $ERROR_OUT1
+	num2=`cat $ERROR_OUT1 | wc -m`
+	t2="And the output have $num2 characters"
+	echo -e "\033[0m\033[5m\033[44m$t2\033[0m"
+fi
+echo "-------------------------------"
+# Check if the OUTFILE2 is empty
+if [ -s $OUTFILE2 ]
+then
+	echo -e "\033[33m$txt3\033[0m"
+	cat $OUTFILE2
+	num3=`cat $OUTFILE2 | wc -m`
+	t3="And the output have $num3 characters"
+	echo -e "\033[0m\033[5m\033[44m$t3\033[0m"
+
+fi
+# Check if the ERROR_OUT2 is empty
+if [ -s $ERROR_OUT2 ]
+then
+	echo -e "\033[31m$txt4\033[0m"
+	cat $ERROR_OUT2
+	num4=`cat $ERROR_OUT2 | wc -m`
+	t4="And the output have $num4 characters"
+	echo -e "\033[0m\033[5m\033[44m$t4\033[0m"
+fi
+
+# clean up
+rm -f $OUTFILE1
+rm -f $OUTFILE2
+rm -f $ERROR_OUT1
+rm -f $ERROR_OUT2
