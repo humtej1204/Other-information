@@ -1,0 +1,18 @@
+#!/bin/bash
+# Adding files
+read -p "Write the name of the files you want to upload to GITHUB:
+"
+files="$REPLY"
+git add $files
+
+# Making a commit
+read -p "Write a commit to GITHUB:
+"
+commit="$REPLY"
+git commit -m "$commit"
+
+# Selecting the branch
+read -p "Write the BRANCH where you want to upload:
+"
+branch="$REPLY"
+git push origin $branch 
