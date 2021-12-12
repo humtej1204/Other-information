@@ -37,4 +37,6 @@ git commit -m "$commit"
 echo -e "$font_blue$back_white Write the BRANCH where you want to upload:$f_none"
 read -p ""
 branch="$REPLY"
-git push origin $branch 
+git push origin $branch
+
+echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM$f_none"
