@@ -22,21 +22,21 @@ st_invisible="\033[8m"
 f_none="\033[0m"
 
 # Adding files
-echo -e "$font_blue$back_white Write the name of the files you want to upload to GITHUB:$f_none"
+echo -e "$font_blue$back_white Write the name of the files you want to upload to GITHUB: $f_none"
 read -p ""
 files="$REPLY"
 git add $files
 
 # Making a commit
-echo -e "$font_green$back_white Write a commit to GITHUB:$f_none"
+echo -e "$font_green$back_white Write a commit to GITHUB: $f_none"
 read -p ""
 commit="$REPLY"
 git commit -m "$commit"
 
 # Selecting the branch
-echo -e "$font_blue$back_white Write the BRANCH where you want to upload:$f_none"
+echo -e "$font_blue$back_white Write the BRANCH where you want to upload: $f_none"
 read -p ""
 branch="$REPLY"
 git push origin $branch
 
-echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM$f_none"
+echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM $f_none"
