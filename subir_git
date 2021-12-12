@@ -1,18 +1,12 @@
 #!/bin/bash
+##########################
+#### CREATED BY HARU #####
+##########################
 # fonts
 font_blue="\033[34m"
-font_yellow="\033[33m"
-font_red="\033[31m"
 font_green="\033[32m"
-font_cyan="\033[36m"
-font_white="\033[37m"
 
 # background
-back_blue="\033[44m"
-back_yellow="\033[43m"
-back_red="\033[41m"
-back_green="\033[42m"
-back_cyan="\033[46m"
 back_white="\033[47m"
 
 # styles
