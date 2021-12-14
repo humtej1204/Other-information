@@ -49,6 +49,11 @@ while [ -s $ERROR_OUT ]; do
 	echo -e "$font_green Let's try again: $f_none"
 	rm $ERROR_OUT
 	git push origin $branch 2> $ERROR_OUT
+	if [ -s $ERROR_OUT ]; then
+		continue
+	else
+		break
+	fi
 done
 
 echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM $f_none"
