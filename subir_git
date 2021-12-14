@@ -44,7 +44,7 @@ git push origin $branch 2> $ERROR_OUT
 # If there is an error when the user put it's username or password
 # We put it in a bucle until the command read the username and password
 # correctly
-while
+while :
 do
 	if [ ! -s $ERROR_OUT ]; then
 		echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM $f_none"
