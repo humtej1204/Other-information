@@ -5,6 +5,7 @@
 # fonts
 font_blue="\033[34m"
 font_green="\033[32m"
+font_red="\033[31m"
 
 # background
 back_white="\033[47m"
@@ -46,6 +47,7 @@ git push origin $branch 2> $ERROR_OUT
 while grep -q "fatal: Authentication failed for" $ERROR_OUT
 do
 	cat $ERROR_OUT
+	echo -e "font_red$back_white The USERNAME and/or PASSWORD are INCORRECT $f_none"
 	echo -e "$font_green Let's try again: $f_none"
 	rm $ERROR_OUT
 	git push origin $branch 2> $ERROR_OUT
