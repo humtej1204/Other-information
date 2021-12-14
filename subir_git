@@ -45,11 +45,12 @@ git push origin $branch 2> $ERROR_OUT
 # We put it in a bucle until the command read the username and password
 # correctly
 # test with grep
-if grep -q "To https://github.com/" $ERROR_OUT
-then
-	echo "the file is empty"
-else
-	echo "the file is full"
-fi
+while grep -q "fatal: Authentication failed for" $ERROR_OUT
+do
+	cat $ERROR_OUT
+	echo -e "$font_green Let's try again: $f_none"
+	rm $ERROR_OUT
+	git push origin $branch 2> $ERROR_OUT
+done
 
 echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM $f_none"
