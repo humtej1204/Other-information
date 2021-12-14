@@ -38,7 +38,9 @@ git commit -m "$commit"
 echo -e "$font_blue$back_white Write the BRANCH where you want to upload: $f_none"
 read -p ""
 branch="$REPLY"
+# Creating a variable for a temp file
 ERROR_OUT="err_out"
+# Removing previous temp file if exist
 rm -f $ERROR_OUT
 git push origin $branch 2> $ERROR_OUT
 
