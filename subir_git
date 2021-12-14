@@ -39,6 +39,10 @@ read -p ""
 branch="$REPLY"
 ERROR_OUT="err_out"
 git push origin $branch 2> $ERROR_OUT
-cat ERROR_OUT="err_out"
-
+while [ -s $ERROR_OUT ]; do
+	cat $ERROR_OUT
+	echo -e "$font_green Let's try again: $f_none"
+	rm $ERROR_OUT
+	git push origin $branch 2> $ERROR_OUT
+done
 echo -e "$font_green$back_white THANKS TO USE THIS HARU-PROGRAM $f_none"
