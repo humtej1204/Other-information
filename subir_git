@@ -45,14 +45,13 @@ git push origin $branch 2> $ERROR_OUT
 # We put it in a bucle until the command read the username and password
 # correctly
 while [ -s $ERROR_OUT ]; do
-	cat $ERROR_OUT
-	echo -e "$font_green Let's try again: $f_none"
-	rm $ERROR_OUT
-	git push origin $branch 2> $ERROR_OUT
-	if [ -s $ERROR_OUT ]; then
-		continue
-	else
+	if [ ! -s $ERROR_OUT ]; then
 		break
+	else
+		cat $ERROR_OUT
+		echo -e "$font_green Let's try again: $f_none"
+		rm $ERROR_OUT
+		git push origin $branch 2> $ERROR_OUT
 	fi
 done
 
