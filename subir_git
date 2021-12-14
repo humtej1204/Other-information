@@ -39,7 +39,7 @@ echo -e "$font_blue$back_white Write the BRANCH where you want to upload: $f_non
 read -p ""
 branch="$REPLY"
 ERROR_OUT="err_out"
-rm $ERROR_OUT
+rm -f $ERROR_OUT
 git push origin $branch 2> $ERROR_OUT
 
 # If there is an error when the user put it's username or password
