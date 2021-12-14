@@ -44,7 +44,8 @@ git push origin $branch 2> $ERROR_OUT
 # If there is an error when the user put it's username or password
 # We put it in a bucle until the command read the username and password
 # correctly
-if [ grep -q "To https://github.com/" $ERROR_OUT ]; then
+if grep -q "To https://github.com/" $ERROR_OUT
+then
 	echo "the file is empty"
 else
 	echo "the file is full"
