@@ -1,1 +1,38 @@
-Test 1
+Casos que deberia tener en cuenta para testear programas:
+*** GENERAL ***
+  * Si se estan ingresando todos los parametros y ninguno esta vacio (missing one argument, missing two or more arguments)
+  * Si los tipos de elementos que ingresan son los tipos de elementos correctos para que la operacion suceda sin problemas
+      >>> Ejemplo 01:
+      ... Si quiero hacer una operacion matematica requiero [Int, Float, etc]
+      ... Si me pasan [char, str, etc] u otros elementos que no pueden ser usados en una operacion matematica debo controlar el error
+      >>> Ejemplo 02:
+      ... Si quiero hacer una operacion con strings requiero [char, str]
+      ... Si me pasan [Int, Float, etc] u otros elementos que no pueden ser usados en una operacion con strings debo controlar el error
+
+*** OPERACIONES MATEMATICAS ***
+  * Si mi operacion matematica admite parametros [negativos, imaginarios, inf (infinito), cero, NaN, etc]
+  
+*** OPERACIONES CON STRINGS ***
+  * Cantidad de [espacios, tabulaciones, saltos de linea] antes o despues (Si se debe eliminar los espacios extra o mantenerlos)
+  * Si el buffer (texto) es demaciado grande, y la operacion tiene un limite de lo que puede trabajar
+  * Si en vez de un [STR] uso solo un [CHAR]
+  * Si la cadena no tiene elementos (es decir STR = "")
+  * Si la cadena contiene elemento nulo (es decir STR = NULL, STR = none, STR o CHAR = "\0")
+  * Si el [ARRAY, LISTA, TUPLA, DICCIONARIO, etc] estan vacios, o no contienen los mismos tipos de elementos, o solo contienen un elemento
+  
+  
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
+  * 
