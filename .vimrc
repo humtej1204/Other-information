@@ -1,10 +1,18 @@
 packadd! dracula
 syntax enable
-colorscheme dracula
+" To can set this color therme we have to follow the following steps in
+" https://github.com/artanikin/vim-synthwave84
+set termguicolors
+colorscheme synthwave84
 set background=dark
 
 " Set tab size
 set shiftwidth=8
+
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd Filetype html setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype c setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
+autocmd Filetype css setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
 
 filetype indent on
 filetype plugin on
@@ -34,8 +42,8 @@ set wildmenu
 set wildmode=list:longest,full
 
 " Dictionary
-set spell
-set spelllang=en
+" set spell
+" set spelllang=en
 
 " Copy and paste in system variable
 set ff=unix
