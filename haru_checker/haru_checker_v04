@@ -9,6 +9,24 @@ OUTFILE2="output_2"
 ERROR_OUT1="err_out_1"
 ERROR_OUT2="err_out_2"
 
+read -p "Write the direction where your shell (compiled ver) is:
+"
+dir="$REPLY"
+
+read -p "Write the name of your compiled shell. ver:
+"
+comp="$REPLY"
+
+# Getting the HOME dir
+printenv HOME > temp
+asd=$(cat temp)
+das=$(echo "$asd")
+
+dir_sh="$das$dir/$comp"
+dir_shell=$(echo $dir_sh | tr -d '~')
+
+cp "$dir_shell" ./
+
 read -p "Write the command which you want to prove: "
 command="$REPLY"
 
@@ -120,3 +138,4 @@ rm -f $OUTFILE1
 rm -f $OUTFILE2
 rm -f $ERROR_OUT1
 rm -f $ERROR_OUT2
+rm -f $comp

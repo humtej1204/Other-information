@@ -1,0 +1,3 @@
+# Copy files in this direction if you want to run it wherever you want
+# Use the option "sudo cp"
+/usr/bin/

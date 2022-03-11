@@ -1,0 +1,17 @@
+#!/bin/bash
+read -p "Write the direction where your shell (compiled ver) is:
+[For example: ~/Other-code-command-use] (without "/" at the end)
+"
+dir="$REPLY"
+
+read -p "Write the name of your compiled shell. ver:
+"
+comp="$REPLY"
+
+# Getting the HOME dir
+das=$(printenv HOME)
+
+dir_sh="$das$dir/$comp"
+dir_shell=$(echo $dir_sh | tr -d '~')
+
+cp "$dir_shell" ./
