@@ -116,6 +116,8 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+# MobaXterm Commands
 export DISPLAY=:0
 export XDG_RUNTIME_DIR=/some/directory/you/specify
 export RUNLEVEL=3
