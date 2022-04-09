@@ -9,10 +9,13 @@ set background=dark
 " Set tab size
 set shiftwidth=8
 
-autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
-autocmd Filetype html setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+" Autoidentation to type of files
 autocmd Filetype c setlocal noexpandtab tabstop=8 shiftwidth=8 softtabstop=8
-autocmd Filetype css setlocal noexpandtab tabstop=2 shiftwidth=2 softtabstop=2
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+autocmd Filetype css setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType javascript setlocal tabstop=4 softtabstop=4 shiftwidth=4
+autocmd FileType ruby setlocal tabstop=2 softtabstop=2 shiftwidth=2
 
 filetype indent on
 filetype plugin on
