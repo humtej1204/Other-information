@@ -10,6 +10,7 @@ font_cyan="\033[36m"
 font_white="\033[37m"
 
 # background color
+back_black="\033[0;40m"
 back_red="\033[41m"
 back_green="\033[42m"
 back_yellow="\033[43m"
@@ -53,3 +54,4 @@ f_none="\033[0m"
 
 # More Information here:
 # https://stackoverflow.com/questions/4842424/list-of-ansi-color-escape-sequences
+# https://www.nayab.xyz/linux/escapecodes
