@@ -6,9 +6,12 @@
 font_blue="\033[34m"
 font_green="\033[32m"
 font_red="\033[31m"
+font_white="\033[37m"
 
 # background
 back_white="\033[47m"
+back_black="\033[0;40m"
+back_yellow="\033[43m"
 
 # styles
 st_none="\033[0m"
@@ -30,8 +33,8 @@ else
 	read -p ""
 	files="$REPLY"
 	git add $files
-	echo -e "$font_green$back_white You can also use this program with the following syntax $f_none"
-	echo -e "$font_red$back_white subir_git [name of files to add] $f_none"
+	echo -e "$font_white$back_yellow You can also use this program with the following syntax $f_none"
+	echo -e "$font_white$back_black subir_git [name of files to add] $f_none"
 	echo ""
 fi
 
