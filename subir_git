@@ -30,8 +30,8 @@ else
 	read -p ""
 	files="$REPLY"
 	git add $files
-	echo -e "$font_green You can also use this program with the following syntax $f_none"
-	echo -e "$font_blue subir_git [name of files to add] $f_none"
+	echo -e "$font_green$back_white You can also use this program with the following syntax $f_none"
+	echo -e "$font_red$back_white subir_git [name of files to add] $f_none"
 fi
 
 # Making a commit
