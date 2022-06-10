@@ -1,0 +1,40 @@
+25 Algoritmos que todo programador deveria conocer:
+
+Searching:
+	Linear Search
+	Binary Search
+	Depth First Search
+	Breadth First Search
+
+Sorting:
+	Insertion Sort
+	Heap Sort
+	Selection Sort
+	MergeSort
+	Quick Sort
+	Counting Sort
+
+Graphs:
+	Kruskal's
+	Dilkstra's
+	Bellman Ford
+	Floyd Warshall
+	Topological Sort
+	Flood Fill
+	Lee
+
+Arrays:
+	Kadane's
+	Floyd's Cycle Detection
+	KMP
+	Quick Select
+	Boyer - More Majority Vote
+
+Basics:
+	Huffman Coding
+	Compression
+	Euclid's
+	Union Find
+
+Data-Structures-and-Algorithms: (More Information)
+https://github.com/thepranaygupta/Data-Structures-and-Algorithms
