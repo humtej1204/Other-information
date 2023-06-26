@@ -33,3 +33,11 @@ npm install -g npm@latest
 sudo npm install -g @angular/cli
 ## REACT JS
 sudo npm -g install create-react-app
+## AWS CLI
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip -u awscliv2.zip
+sudo ./aws/install
+aws --version
+##### depues de ello ejecutar:
+##### aws configure
+##### para poder configurar el AWS Access Key ID, AWS Secret Access Key, Default region name y Default output format
