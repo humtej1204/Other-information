@@ -33,6 +33,23 @@ npm install -g npm@latest
 sudo npm install -g @angular/cli
 ## REACT JS
 sudo npm -g install create-react-app
+## JAVA
+sudo apt install openjdk-8-jre-headless -y
+sudo apt install openjdk-11-jre-headless -y
+sudo apt install openjdk-16-jre-headless -y
+sudo apt install openjdk-17-jre-headless -y
+sudo apt install openjdk-8-jdk -y
+sudo apt install openjdk-11-jdk -y
+sudo apt install openjdk-16-jdk -y
+sudo apt install openjdk-17-jdk -y
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+##### con: sudo update-alternatives --config java
+##### puedes configurar que version dej JDK de java deseas usar
+## MAVEN
+sudo apt install maven -y
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
 ## AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip -u awscliv2.zip
