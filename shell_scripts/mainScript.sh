@@ -8,6 +8,8 @@ sudo apt install build-essential
 sudo apt-get install curl
 ## TREE
 sudo apt-get install tree
+## MAKEFILE
+sudo apt-get install make
 ## PYTHON
 sudo apt-get install python3
 sudo apt-get install python3-pip
