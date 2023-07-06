@@ -42,19 +42,21 @@ sudo apt install openjdk-8-jdk -y
 sudo apt install openjdk-11-jdk -y
 sudo apt install openjdk-16-jdk -y
 sudo apt install openjdk-17-jdk -y
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+echo -e "export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> ~/.bashrc
+echo -e 'export PATH=${JAVA_HOME}/bin:${PATH}' >> ~/.bashrc
+source ~/.bashrc
 ##### con: sudo update-alternatives --config java
 ##### puedes configurar que version dej JDK de java deseas usar
 ## MAVEN
 sudo apt install maven -y
-export M2_HOME=/opt/maven
-export MAVEN_HOME=/opt/maven
-export PATH=${M2_HOME}/bin:${PATH}
+echo -e "export M2_HOME=/opt/maven" >> ~/.bashrc
+echo -e "export MAVEN_HOME=/opt/maven" >> ~/.bashrc
+echo -e 'export PATH=${M2_HOME}/bin:${PATH}' >> ~/.bashrc
+source ~/.bashrc
 ## AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip -u awscliv2.zip
 sudo ./aws/install
-aws --version
 ##### depues de ello ejecutar:
 ##### aws configure
 ##### para poder configurar el AWS Access Key ID, AWS Secret Access Key, Default region name y Default output format
