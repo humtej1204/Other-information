@@ -47,6 +47,8 @@ sudo chown -R `id -un` /data/db
 ##### ya que en algunos lados puede tener un nombre diferente como "mongodb, mongodb-server, mongodb-org, etc".
 ##### esto se hace con: sudo service --status-all
 ##### una vez encontrado el nombre del servicio mongo
+##### su puede entrar al mongo shell con el comando: mongo
+##### para ver  la version: mongo --version
 ## JAVA
 sudo apt install openjdk-8-jre-headless -y
 sudo apt install openjdk-11-jre-headless -y
