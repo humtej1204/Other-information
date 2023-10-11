@@ -69,6 +69,15 @@ echo -e "export M2_HOME=/opt/maven" >> ~/.bashrc
 echo -e "export MAVEN_HOME=/opt/maven" >> ~/.bashrc
 echo -e 'export PATH=${M2_HOME}/bin:${PATH}' >> ~/.bashrc
 source ~/.bashrc
+## FLUTTER
+git clone -b master https://github.com/flutter/flutter.git
+./flutter/bin/flutter --version
+echo 'export PATH="$PATH:'`pwd`'/flutter/bin"' >> ~/.bashrc
+source ~/.bashrc
+flutter precache
+##### correr el comando: flutter doctor
+##### para verificar si existe alguna dependencia que se necesite para completar la configuración
+##### (para una salida detallada, añade la etiqueta -v)
 ## AWS CLI
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
 unzip -u awscliv2.zip
