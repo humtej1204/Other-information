@@ -44,6 +44,9 @@ nvm install 14 #Version 14 - cambiar numero para cambiar version
 sudo apt install npm -y
 npm install -g npm@latest
 
+## NESTJS
+npm i -g @nestjs/cli
+
 ## ANGULAR
 sudo npm install -g @angular/cli
 
