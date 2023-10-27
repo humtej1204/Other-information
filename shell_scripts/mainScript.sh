@@ -1,7 +1,7 @@
 #Update Linux packages
 sudo apt-get update
 sudo apt-get upgrade -y
-sudo apt install build-essential
+sudo apt install build-essential -y
 
 #Install Packages
 ## CURL
